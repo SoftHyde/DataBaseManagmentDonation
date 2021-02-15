@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1050AA6E-EAAF-4E45-B5B4-27FEE0BD7C7D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Interfaz_Proyecto</RootNamespace>
+    <AssemblyName>Interfaz_Proyecto</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=4.1.2.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.4.1.2\lib\net461\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.6.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.6.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.3\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\Elemento_Donacion.cs" />
+    <Compile Include="Clases\exportacion.cs" />
+    <Compile Include="Clases\elemento_usuario.cs" />
+    <Compile Include="Forms\Ventana_modificacion_ubicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ventana_modificacion_ubicacion.Designer.cs">
+      <DependentUpon>Ventana_modificacion_ubicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ventana_modificacion_producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ventana_modificacion_producto.Designer.cs">
+      <DependentUpon>Ventana_modificacion_producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ventana_modificacion_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ventana_modificacion_usuario.Designer.cs">
+      <DependentUpon>Ventana_modificacion_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ventana_iniciar_sesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ventana_iniciar_sesion.Designer.cs">
+      <DependentUpon>Ventana_iniciar_sesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ventana_nuevo_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ventana_nuevo_usuario.Designer.cs">
+      <DependentUpon>Ventana_nuevo_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ventana_nueva_ubicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ventana_nueva_ubicacion.Designer.cs">
+      <DependentUpon>Ventana_nueva_ubicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ventana_acerca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ventana_acerca.Designer.cs">
+      <DependentUpon>Ventana_acerca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ventana_nuevo_negocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ventana_nuevo_negocio.Designer.cs">
+      <DependentUpon>Ventana_nuevo_negocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ventana_resumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ventana_resumen.Designer.cs">
+      <DependentUpon>Ventana_resumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ventana_principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ventana_principal.Designer.cs">
+      <DependentUpon>Ventana_principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ventana_nueva_donacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ventana_nueva_donacion.Designer.cs">
+      <DependentUpon>Ventana_nueva_donacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ventana_modificacion_negocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ventana_modificacion_negocio.Designer.cs">
+      <DependentUpon>Ventana_modificacion_negocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ventana_modificacion_donacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ventana_modificacion_donacion.Designer.cs">
+      <DependentUpon>Ventana_modificacion_donacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Program.cs" />
+    <Compile Include="Forms\Ventana_nuevo_producto_duenio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ventana_nuevo_producto_duenio.Designer.cs">
+      <DependentUpon>Ventana_nuevo_producto_duenio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Clases\utilidades.cs" />
+    <Compile Include="Forms\Ventana_ingreso_db.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ventana_ingreso_db.Designer.cs">
+      <DependentUpon>Ventana_ingreso_db.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Ventana_modificacion_ubicacion.resx">
+      <DependentUpon>Ventana_modificacion_ubicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ventana_modificacion_producto.resx">
+      <DependentUpon>Ventana_modificacion_producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ventana_modificacion_usuario.resx">
+      <DependentUpon>Ventana_modificacion_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ventana_iniciar_sesion.resx">
+      <DependentUpon>Ventana_iniciar_sesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ventana_nuevo_usuario.resx">
+      <DependentUpon>Ventana_nuevo_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ventana_nueva_ubicacion.resx">
+      <DependentUpon>Ventana_nueva_ubicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ventana_acerca.resx">
+      <DependentUpon>Ventana_acerca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ventana_nuevo_negocio.resx">
+      <DependentUpon>Ventana_nuevo_negocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ventana_resumen.resx">
+      <DependentUpon>Ventana_resumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ventana_principal.resx">
+      <DependentUpon>Ventana_principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ventana_nueva_donacion.resx">
+      <DependentUpon>Ventana_nueva_donacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ventana_modificacion_negocio.resx">
+      <DependentUpon>Ventana_modificacion_negocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ventana_modificacion_donacion.resx">
+      <DependentUpon>Ventana_modificacion_donacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ventana_nuevo_producto_duenio.resx">
+      <DependentUpon>Ventana_nuevo_producto_duenio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\Ventana_ingreso_db.resx">
+      <DependentUpon>Ventana_ingreso_db.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Login.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\telegram_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\whatsapp_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\email_icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
